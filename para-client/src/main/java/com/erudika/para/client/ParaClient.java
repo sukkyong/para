@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2022 Erudika. https://erudika.com
+ * Copyright 2013-2022 Erudika. https://erudika.com git test
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,27 +17,6 @@
  */
 package com.erudika.para.client;
 
-import com.erudika.para.core.App;
-import static com.erudika.para.core.App.AllowedMethods.DELETE;
-import static com.erudika.para.core.App.AllowedMethods.GET;
-import static com.erudika.para.core.App.AllowedMethods.PATCH;
-import static com.erudika.para.core.App.AllowedMethods.POST;
-import static com.erudika.para.core.App.AllowedMethods.PUT;
-import com.erudika.para.core.ParaObject;
-import com.erudika.para.core.Tag;
-import com.erudika.para.core.User;
-import com.erudika.para.core.rest.Signer;
-import com.erudika.para.core.utils.Config;
-import com.erudika.para.core.utils.Pager;
-import com.erudika.para.core.utils.Para;
-import com.erudika.para.core.utils.ParaObjectUtils;
-import com.erudika.para.core.utils.Utils;
-import com.erudika.para.core.validation.Constraint;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.ws.rs.core.MultivaluedHashMap;
-import jakarta.ws.rs.core.MultivaluedMap;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
@@ -57,7 +36,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import nl.altindag.ssl.SSLFactory;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.hc.client5.http.classic.methods.HttpDelete;
@@ -83,6 +62,30 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.apache.hc.core5.http.protocol.HttpContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.erudika.para.core.App;
+import static com.erudika.para.core.App.AllowedMethods.DELETE;
+import static com.erudika.para.core.App.AllowedMethods.GET;
+import static com.erudika.para.core.App.AllowedMethods.PATCH;
+import static com.erudika.para.core.App.AllowedMethods.POST;
+import static com.erudika.para.core.App.AllowedMethods.PUT;
+import com.erudika.para.core.ParaObject;
+import com.erudika.para.core.Tag;
+import com.erudika.para.core.User;
+import com.erudika.para.core.rest.Signer;
+import com.erudika.para.core.utils.Config;
+import com.erudika.para.core.utils.Pager;
+import com.erudika.para.core.utils.Para;
+import com.erudika.para.core.utils.ParaObjectUtils;
+import com.erudika.para.core.utils.Utils;
+import com.erudika.para.core.validation.Constraint;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.ws.rs.core.MultivaluedHashMap;
+import jakarta.ws.rs.core.MultivaluedMap;
+import nl.altindag.ssl.SSLFactory;
 
 /**
  * The Java REST client for communicating with a Para API server.
